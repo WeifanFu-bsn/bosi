@@ -2,11 +2,10 @@
 # REGISTRY_IP is the IP configured as local_ip in undercloud.conf
 
 container_images:
-- imagename: registry.connect.redhat
-  .com/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-6
+- imagename: registry.connect.redhat.com/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-7
   push_destination: <REGISTRY_IP>:8787
-- imagename: registry.connect.redhat.com/bigswitch/rhosp13-openstack-horizon-bigswitch:13.0-4
+- imagename: registry.connect.redhat.com/bigswitch/rhosp13-openstack-horizon-bigswitch:13.0-5
   push_destination: <REGISTRY_IP>:8787
 # uncomment for PV mode
-#- imagename: registry.connect.redhat.com/bigswitch/rhosp13-openstack-nova-compute-bigswitch:13.0-2
+#- imagename: registry.connect.redhat.com/bigswitch/rhosp13-openstack-nova-compute-bigswitch:13.0-3
 #  push_destination: <REGISTRY_IP>:8787

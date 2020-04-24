@@ -2,11 +2,11 @@
 # REGISTRY_IP is the IP configured as local_ip in undercloud.conf
 
 parameter_defaults:
-  DockerNeutronApiImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-6
-  DockerNeutronConfigImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-6
-  DockerHorizonImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-horizon-bigswitch:13.0-4
-  DockerHorizonConfigImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-horizon-bigswitch:13.0-4
+  DockerNeutronApiImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-7
+  DockerNeutronConfigImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-7
+  DockerHorizonImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-horizon-bigswitch:13.0-5
+  DockerHorizonConfigImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-horizon-bigswitch:13.0-5
 # uncomment for PV mode
-#  DockerNeutronBigswitchAgentImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-4
-#  DockerNovaComputeImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-nova-compute-bigswitch:13.0-2
-#  DockerNovaLibvirtConfigImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-nova-compute-bigswitch:13.0-2
+#  DockerNeutronBigswitchAgentImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-neutron-server-bigswitch:13.0-7
+#  DockerNovaComputeImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-nova-compute-bigswitch:13.0-3
+#  DockerNovaLibvirtConfigImage: <REGISTRY_IP>:8787/bigswitch/rhosp13-openstack-nova-compute-bigswitch:13.0-3
