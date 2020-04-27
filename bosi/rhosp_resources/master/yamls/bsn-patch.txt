@@ -1,0 +1,12 @@
+Add an extra mount point in the neutron-api service container Our Neutron plugin uses os-net-config to provide intelligent interface grouping. Add /etc/os-net-config as a mount volume for neutron-api service.
+User need to cut and paste the following in the undercloud before the actual deployment starts. BCF Deployment guide step no # 19
+
+For P only deployment , Following needs to be cut and paste (Exactly same as below including spaces , if you are not using "overcloud-plan" directory , please modify accordingly where the neutron-api.yaml is present.)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+sed -i '0,/                      - \/var\/lib\/config-data\/puppet-generated\/neutron\/\:\/var\/lib\/kolla\/config_files\/src:ro/s//                      - \/var\/lib\/config-data\/puppet-generated\/neutron\/\:\/var\/lib\/kolla\/config_files\/src:ro\n                      - \/etc\/os-net-config\:\/etc\/os-net-config\:ro/' /home/stack/overcloud-plan/docker/services/neutron-api.yaml
+
+
+For P+V Deployments , Use the below as well inaddition to the above.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+sed -i '0,/                      - \/lib\/modules\:\/lib\/modules\:ro/s//                      - \/lib\/modules\:\/lib\/modules\:ro\n                      - \/usr\/sbin\:\/usr\/sbin/' /home/stack/overcloud-plan/docker/services/nova-compute.yaml
